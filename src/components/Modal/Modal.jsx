@@ -5,16 +5,16 @@ import css from './ModalStyles.module.css';
 export default function Modal({ src, alt, toggle }) {
   const overlayClickRef = useRef();
 
-  //cdm
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
-  }, [handleKeyDown]);
-  //cwu
-  useEffect(() => {
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [handleKeyDown]);
+  // //cdm
+  // useEffect(() => {
+  //   document.addEventListener('keydown', handleKeyDown);
+  // }, []);
+  // //cwu
+  // useEffect(() => {
+  //   return () => {
+  //     document.removeEventListener('keydown', handleKeyDown);
+  //   };
+  // }, []);
 
   //cdm+cdu
   // useEffect(() => {
