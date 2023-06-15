@@ -5,22 +5,22 @@ import css from './ModalStyles.module.css';
 export default function Modal({ src, alt, toggle }) {
   const overlayClickRef = useRef();
 
-  // //cdm
-  // useEffect(() => {
-  //   document.addEventListener('keydown', handleKeyDown);
-  // }, []);
-  // //cwu
-  // useEffect(() => {
-  //   return () => {
-  //     document.removeEventListener('keydown', handleKeyDown);
-  //   };
-  // }, []);
-
-  //cdm+cdu
+  //cdm
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
+  //cwu
+  useEffect(() => {
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  //cdm+cdu
+  // useEffect(() => {
+  //   document.addEventListener('keydown', handleKeyDown);
+  //   return () => document.removeEventListener('keydown', handleKeyDown);
+  // }, []);
 
   const handleKeyDown = e => {
     if (e.code === 'Escape') {
