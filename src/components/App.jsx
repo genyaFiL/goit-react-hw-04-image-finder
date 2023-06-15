@@ -68,10 +68,10 @@ export default function App() {
     setPage(prevPage => prevPage + 1);
   };
 
-  // useEffect(() => {
-  //   pixabayAPI.q = searchQuery.trim();
-  //   searchPhotos();
-  // }, [searchQuery]);
+  useEffect(() => {
+    pixabayAPI.q = searchQuery.trim();
+    searchPhotos();
+  }, [searchQuery]);
 
   return (
     <div className={css.app}>

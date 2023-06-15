@@ -17,10 +17,10 @@ export default function Modal({ src, alt, toggle }) {
   // }, []);
 
   //cdm+cdu
-  // useEffect(() => {
-  //   document.addEventListener('keydown', handleKeyDown);
-  //   return () => document.removeEventListener('keydown', handleKeyDown);
-  // }, []);
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const handleKeyDown = e => {
     if (e.code === 'Escape') {
