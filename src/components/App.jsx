@@ -71,7 +71,7 @@ export default function App() {
   useEffect(() => {
     pixabayAPI.q = searchQuery.trim();
     searchPhotos();
-  }, [searchQuery]);
+  }, [searchQuery, searchPhotos]);
 
   return (
     <div className={css.app}>

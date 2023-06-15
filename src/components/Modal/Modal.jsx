@@ -8,13 +8,13 @@ export default function Modal({ src, alt, toggle }) {
   //cdm
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [handleKeyDown]);
   //cwu
   useEffect(() => {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, []);
+  }, [handleKeyDown]);
 
   //cdm+cdu
   // useEffect(() => {
